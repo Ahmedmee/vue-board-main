@@ -14,19 +14,23 @@
 
     <div class="  grid-cols-9  p-4 bg-white border border-gray-200 rounded-lg shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
 
-      <div class="flex flex-col items-center pb-10">
-        <img class="w-24 h-24 mb-3 rounded-full shadow-lg mt-3" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Bonnie image"/>
+      <div id="preview" class="flex flex-col items-center pb-10">
+        <img v-if="item.imageUrl" :src="item.imageUrl" class="w-24 h-24 mb-3 rounded-full shadow-lg mt-3"  alt="Bonnie image"/>
         <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Mowfaq Hassan </h5>
         <span class="text-sm text-gray-500 dark:text-gray-400">Admin</span>
         <div class="flex mt-2 space-x-3 md:mt-6">
           <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">
-            <a href="" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update Picture</a></label>
+            <input type="file"  class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" accept="image/*" @change="onChange" />
+          </label>
         </div>
 
        
     </div>
 
-
+    
+    <div >
+      <img  />
+    </div>
       <form  >
 
         <div class="grid gap-6 mb-6 md:grid-cols-2">
@@ -107,11 +111,32 @@
 
 </template>
 
-<script setup lang="ts">
+<script >
+
 import { ref } from 'vue'
 import Breadcrumb from '../partials/Breadcrumb.vue'
 
 const open = ref(false)
+export default {
+  name: 'imageUpload',
+  data() {
+    return {
+      item:{
+          //...
+          image : null,
+          imageUrl: null
+      }
+    }
+  },
+  methods: {
+    onChange(e) {
+      const file = e.target.files[0]
+      this.image = file
+      this.item.imageUrl = URL.createObjectURL(file)
+      
+    }
+  }
+} 
 </script>
 
 <style>

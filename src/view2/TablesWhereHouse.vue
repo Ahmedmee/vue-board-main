@@ -7,124 +7,193 @@
     <div class="mt-8">
 
       <div class="mt-6">
-        <h2 class="text-xl font-semibold leading-tight text-gray-700">Orders</h2>
 
         
 
-        <div class="px-4 py-4 -mx-4 overflow-x-auto sm:-mx-8 sm:px-8">
-          <div
-            class="inline-block min-w-full overflow-hidden rounded-lg shadow"
-          >
-            <table class="min-w-full leading-normal">
-              <thead>
-                <tr>
-                  <th
-                    class="px-5 py-3 text-xs font-semibold tracking-wider text-left text-gray-600 uppercase bg-gray-100 border-b-2 border-gray-200"
-                  >
-                    User
-                  </th>
-                  <th
-                    class="px-5 py-3 text-xs font-semibold tracking-wider text-left text-gray-600 uppercase bg-gray-100 border-b-2 border-gray-200"
-                  >
-                    ID
-                  </th>
-                  <th
-                    class="px-5 py-3 text-xs font-semibold tracking-wider text-left text-gray-600 uppercase bg-gray-100 border-b-2 border-gray-200"
-                  >
-                    Created at
-                  </th>
-                  <th
-                    class="px-5 py-3 text-xs font-semibold tracking-wider text-left text-gray-600 uppercase bg-gray-100 border-b-2 border-gray-200"
-                  >
-                    Status
-                  </th>
-                 
-
-
-                  <th
-                  class="px-5 py-3 text-xs font-semibold tracking-wider text-left text-gray-600 uppercase bg-gray-100 border-b-2 border-gray-200"
-                >
-                  Updates
-                </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(u, index) in paginatedTableData" :key="index">
-                  <td
-                    class="px-5 py-5 text-sm bg-white border-b border-gray-200"
-                  >
-                    <div class="flex items-center">
-                      <div class="flex-shrink-0 w-10 h-10">
-                        <img
-                          class="w-full h-full rounded-full"
-                          :src="u.picture"
-                          alt="profile pic"
-                        />
-                      </div>
-
-                      <div class="ml-3">
-                        <p class="text-gray-900 whitespace-nowrap">
-                          {{ u.name }}
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                  <td
-                    class="px-5 py-5 text-sm bg-white border-b border-gray-200"
-                  >
-                    <p class="text-gray-900 whitespace-nowrap">{{ u.role }}</p>
-                  </td>
-                  <td
-                    class="px-5 py-5 text-sm bg-white border-b border-gray-200"
-                  >
-                    <p class="text-gray-900 whitespace-nowrap">
-                      {{ u.created }}
-                    </p>
-                  </td>
-                  <td
-                    class="px-5 py-5 text-sm bg-white border-b border-gray-200"
-                  >
-                    <span
-                      :class="`relative inline-block px-3 py-1 font-semibold text-${u.statusColor}-900 leading-tight`"
-                    >
-                      <span
-                        aria-hidden
-                        :class="`absolute inset-0 bg-${u.statusColor}-200 opacity-50 rounded-full`"
-                      ></span>
-                      <span class="relative">Shippied</span>
-                    </span>
-                  </td>
-                 
-
-
-
-                  <td
-                  class="px-5 py-5 text-sm bg-white border-b border-gray-200"
-                >
-                  <p class="text-gray-900 whitespace-nowrap">
-                    <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">update
-                    </button>
-                  </p>
-                </td>
-                                      
-
-                </tr>
-              </tbody>
-            </table>
-      
-          </div>
-        </div>
+       
       </div>
     </div>
 
     
 
+   
+<br>
+<br>
+
+<h2 class="text-xl font-semibold leading-tight text-gray-700">Orders</h2>
+
+
+<br>
+<br>
+    <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                  
+                 
+                  <th scope="col" class="py-3 px-6">
+                      Order Id
+                  </th>
+                  <th scope="col" class="py-3 px-6">
+                      status
+                  </th>
+                  <th scope="col" class="py-3 px-6">
+                      Action
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                 
+                  
+                  <td class="py-4 px-6">
+                       
+                  459874987435843
+                  </td>
+                  <td class="py-4 px-6">
+                      <div class="flex items-center">
+                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div> Reviewed
+                      </div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <button   @click="Add()" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
+
+                    <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
+                   </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  
+    
+    
+                 
+                  <td class="py-4 px-6">
+454984598458794
+                  </td>
+                  <td class="py-4 px-6">
+                      <div class="flex items-center">
+                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div> Reviewed
+                      </div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <button   @click="Add()" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
+
+                    <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
+                  </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                 
+                 
+                  <td class="py-4 px-6">
+454454557676                  </td>
+                  <td class="py-4 px-6">
+                      <div class="flex items-center">
+                          <div class="h-2.5 w-2.5 rounded-full mr-2"></div> Reviewed
+                      </div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <button type="button" @click="Add()" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
+
+                    <button @click="DeleteOrder()" type="button"  class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
+                  </td>
+              </tr>
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                  
+    
+                  
+                  <td class="py-4 px-6">
+547438509439857394                  </td>
+                  <td class="py-4 px-6">
+                      <div class="flex items-center">
+                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div>Reviewed
+                      </div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <button  @click="Add()" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
+                    <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
+                  </td>
+              </tr>
+              <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                
+                  
+                  <td class="py-4 px-6">
+4537598435984375                  </td>
+                  <td class="py-4 px-6">
+                      <div class="flex items-center">
+                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div> Reviewed
+                      </div>
+                  </td>
+                  <td class="py-4 px-6">
+                    <button  @click="Add()" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
+                    <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
   </div>
 
   
 </template>
-
-<script setup lang="ts">
+<script >
 import { useTableData } from '../hooks/useTableData'
 const { simpleTableData, paginatedTableData, wideTableData } = useTableData()
+
+
+
+
+export default {
+name: "EmployeeList",
+data() {
+      return {}
+    },
+    methods: {
+        DeleteOrder() {
+          this.$swal({
+          title: 'Are you sure To Delete This Order ?',
+          text: 'You can\'t revert your action',
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes Delete it!',
+          cancelButtonText: 'No, Keep it!',
+          showCloseButton: true,
+          showLoaderOnConfirm: true
+        }).then((result) => {
+          if(result.value) {
+            this.$swal('Deleted', 'You successfully deleted this file', 'success')
+          } else {
+            this.$swal('Cancelled', 'Your file is still intact', 'info')
+          }
+        })
+      }, 
+
+       Add() {
+          this.$swal({
+          title: 'Are you sure To Add This Order ?',
+          text: 'You can\'t revert your action',
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes Add  it!',
+          cancelButtonText: 'No, Keep it!',
+          showCloseButton: true,
+          showLoaderOnConfirm: true
+        }).then((result) => {
+          if(result.value) {
+            this.$swal('Add', 'You successfully Add this Order', 'success')
+          } else {
+            this.$swal('Cancelled', 'Your file is still intact', 'info')
+          }
+        })
+      }, 
+    
+    
+    }          // Adding an input method from SweetAlert 2 automatically binds an input form.
+       
+}
+    
+  
+
+
+
+
 </script>
+

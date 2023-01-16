@@ -63,28 +63,21 @@
         <div class="flex items-center justify-between mt-4">
           <div>
             <label class="inline-flex items-center">
-              <input
-                type="checkbox"
-                class="
-                  text-indigo-600
-                  border-gray-200
-                  rounded-md
-                  focus:border-indigo-600
-                  focus:ring
-                  focus:ring-opacity-40
-                  focus:ring-indigo-500
-                "
-              />
-              <span class="mx-2 text-sm text-gray-600">Remember me</span>
-            </label>
+<router-link to="/Registration">
+              <a
+              class="block text-sm text-indigo-700 fontme hover:underline"
+              href="#"
+              >Registeration</a></router-link>
+                      </label>
           </div>
 
           <div>
+            <router-link to="/Forget">
             <a
               class="block text-sm text-indigo-700 fontme hover:underline"
-              href="#"
+              
               >Forgot your password?</a
-            >
+            ></router-link>
           </div>
         </div>
 
@@ -127,6 +120,10 @@ const users=[
     role:'admin',
   },
   {
+    email:"saleman@gmail.com",
+    role:'saleman',
+  },
+  {
     email:"WhereHouse@gmail.com",
     role:"wherehouse"
   },
@@ -143,7 +140,6 @@ const users=[
     role:"user"
   }
 ]
-
 function login() { 
 
 const user=search(email.value,users);
@@ -152,6 +148,11 @@ console.log(user);
 if(user.role==="admin"){
   userStore.setAdmin();
   router.push("/charts");
+  }
+  else if(user.role==="saleman") {
+    userStore.setSaleman();
+  // console.log(userStore.userRole);
+    router.push("/ChartViewWhereHouse");
   }
   else if(user.role==="wherehouse") {
     userStore.setWherehouse();
@@ -176,7 +177,7 @@ if(user.role==="admin"){
   // console.log(userStore.userRole);
     router.push("/ChartViewUser");
   }
-  
+  localStorage.setItem("role", user.role);
 }
 function search(nameKey: any, myArray: string|any[]){
     for (let i=0; i < myArray.length; i++) {

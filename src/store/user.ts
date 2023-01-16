@@ -8,8 +8,14 @@ export const useUserStore = defineStore('user', {
       userRole: (state) => state.role,
     },
     actions: {
+      setRole(role:string) {
+        this.role = role;
+      },
       setAdmin(){
         this.role = 'admin';
+      },
+      setSaleman(){
+        this.role = 'saleman';
       },
       setRepresentive(){
         this.role = 'representive';

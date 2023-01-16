@@ -21,7 +21,6 @@ import TablesAgent from "../Agentview4/TablesAgent.vue"
 import TrackAgent from "../Agentview4/TrackAgent.vue"
 import ChartViewAgent from "../Agentview4/ChartViewAgent.vue"
 import writeReviewAgent from "../Agentview4/writeReviewAgent.vue"
-import WhereHouseEditProfile from "../view2/WhereHouseEditProfile.vue"
 import AgentEditProfile from "../Agentview4/AgentEditProfile.vue"
 import UserEditProfile from "../userview3/UserEditProfile.vue"
 import RepresentiveEditProfile from "../Representiveview5/RepresentiveEditProfile.vue"
@@ -29,9 +28,16 @@ import ChartViewRepresentive from "../Representiveview5/ChartViewRepresentive.vu
 import TablesRepresentive from "../Representiveview5/TablesRepresentive.vue"
 import TrackRepresentive from "../Representiveview5/TrackRepresentive.vue"
 import writeReviewrepresentive from '../Representiveview5/writeReviewrepresentive.vue'
+import UserPayment  from "../userview3/UserPayment.vue";
+import Employee from "../views/Employee.vue";
+import cargoDetils  from "../userview3/cargoDetils.vue";
+import Registration from "../views/Registration.vue";
+import Forget from "../views/Forget.vue";
+import assingeEmployee from "../salemanviews/assingeEmployee.vue"
+import salemanEditProfile from "../salemanviews/salemanEditProfile.vue"
+import  WhereHousEditProfile from "../view2/WhereHousEditProfile.vue"
 
-
-
+import SendEmail from "../views/SendEmail.vue"
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -40,7 +46,61 @@ const routes: Array<RouteRecordRaw> = [
     component: Login,
     meta: { layout: "empty" },
   },
-  
+  {
+    path: "/SendEmail",
+    name: "SendEmail",
+    component: SendEmail,
+    meta: { layout: "empty" },
+  },
+  {
+    path: "/Forget",
+    name: "Forget",
+    component: Forget,
+    meta: { layout: "empty" },
+  },
+  {
+    path: "/assingeEmployee",
+    name: "assingeEmployee",
+    component: assingeEmployee,
+  },
+  {
+    path: "/assingeEmployee",
+    name: "assingeEmployee",
+    component: assingeEmployee,
+  },
+  {
+    path: "/WhereHousEditProfile",
+    name: "WhereHousEditProfile",
+    component: WhereHousEditProfile,
+  },
+  {
+    path: "/Registration",
+    name: "Registration",
+    component:Registration ,
+    meta: { layout: "empty" }
+    
+  },
+  {
+    path: "/UserPayment",
+    name: "UserPayment",
+    component:UserPayment 
+    
+  },
+  {
+    path: "/cargoDetils",
+    name: "cargoDetils",
+    component:cargoDetils 
+    
+  },
+
+
+  {
+    path: "/Employee",
+    name: "Employee",
+    component:Employee 
+    
+  },
+
 
   {
     path: "/ChartViewUser",
@@ -78,12 +138,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   
   
-  {
-    path: "/WhereHouseEditProfile",
-    name: "WhereHouseEditProfile",
-    component:WhereHouseEditProfile  
-    
-  },
+ 
 
   {
     path: "/AgentEditProfile",
