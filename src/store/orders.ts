@@ -24,6 +24,9 @@ const store = defineStore('orders', {
       }).finally(() => {
         this.loading = false;
       })
+    },
+    deleteOrder(index:number)  {
+      this.orders.splice(index, 1);
     }
 
   }

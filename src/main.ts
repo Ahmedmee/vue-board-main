@@ -27,7 +27,15 @@ const app = createApp(App);
 app.use(VueSweetalert2);
 app.component("default-layout", DashboardLayout);
 app.component("empty-layout", EmptyLayout);
-
+axios.defaults.baseURL = "http://localhost:3030/api";
+axios.interceptors.request.use((config:any) => {
+  const userStore = useUserStore();
+  const token = userStore.user?.token;
+  if (token) {
+    config.headers.Authorization = token;
+  }
+  return config;
+});
 app.use(pinia)
 .use(router)
 

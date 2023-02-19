@@ -35,6 +35,7 @@ import Registration from "../views/Registration.vue";
 import Forget from "../views/Forget.vue";
 import assingeEmployee from "../salemanviews/assingeEmployee.vue"
 import salemanEditProfile from "../salemanviews/salemanEditProfile.vue"
+import ChartViewSaleman from "../salemanviews/ChartView.vue"
 import  WhereHousEditProfile from "../view2/WhereHousEditProfile.vue"
 
 import SendEmail from "../views/SendEmail.vue"
@@ -75,7 +76,20 @@ const routes: Array<RouteRecordRaw> = [
       needsAuth: true,
       needsRole: "saleman"
     }
+
   },
+  
+  {
+    path: "/ChartViewSaleman",
+    name: "ChartViewSaleman",
+    component: ChartViewSaleman,
+    meta: {
+      needsAuth: true,
+      needsRole: "saleman"
+    }
+
+  },
+  
   {
     path: "/WhereHousEditProfile",
     name: "WhereHousEditProfile",
@@ -275,8 +289,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "Track",
     component: Track, 
     meta: {
-      needsAuth: true,
-      needsRole: "user"
+      needsAuth: true
     }
   },
   {

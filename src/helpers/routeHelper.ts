@@ -4,7 +4,7 @@ export function getRedirectRoleRoute(role:string):string {
     }
     else if(role==="saleman") {
     // console.log(userStore.userRole);
-      return ("/ChartViewWhereHouse");
+      return ("/ChartViewSaleman");
     }
     else if(role==="wherehouse") {
     // console.log(userStore.userRole);

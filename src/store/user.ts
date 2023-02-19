@@ -7,6 +7,8 @@ export const useUserStore = defineStore('user', {
     }),
     getters: {
       userRole: (state) => state.user?.role,
+      token: (state) => state.user?.token,
+      refreshToken: (state) => state.user?.refreshToekn,
     },
     actions: {
       initUser() {
