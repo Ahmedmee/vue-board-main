@@ -42,17 +42,16 @@
                   </th>
               </tr>
           </thead>
-          <tbody>
+          <tbody   v-for="order in orders" :key="order">
               <tr  class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                  
                   
                   <td class="py-4 px-6">
-                       
-                  459874987435843
+                     {{ order.id }}                       
                   </td>
                   <td class="py-4 px-6">
                       <div class="flex items-center">
-                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div> Reviewed
+                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div> {{ order.status[0] }}
                       </div>
                   </td>
                   <td class="py-4 px-6">
@@ -61,72 +60,10 @@
                     <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
                    </td>
               </tr>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  
-    
-    
-                 
-                  <td class="py-4 px-6">
-454984598458794
-                  </td>
-                  <td class="py-4 px-6">
-                      <div class="flex items-center">
-                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div> Reviewed
-                      </div>
-                  </td>
-                  <td class="py-4 px-6">
-                    <button   @click="Add()" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
-
-                    <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
-                  </td>
-              </tr>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                 
-                 
-                  <td class="py-4 px-6">
-454454557676                  </td>
-                  <td class="py-4 px-6">
-                      <div class="flex items-center">
-                          <div class="h-2.5 w-2.5 rounded-full mr-2"></div> Reviewed
-                      </div>
-                  </td>
-                  <td class="py-4 px-6">
-                    <button type="button" @click="Add()" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
-
-                    <button @click="DeleteOrder()" type="button"  class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
-                  </td>
-              </tr>
-              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                  
-    
-                  
-                  <td class="py-4 px-6">
-547438509439857394                  </td>
-                  <td class="py-4 px-6">
-                      <div class="flex items-center">
-                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div>Reviewed
-                      </div>
-                  </td>
-                  <td class="py-4 px-6">
-                    <button  @click="Add()" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
-                    <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
-                  </td>
-              </tr>
-              <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
-                
-                  
-                  <td class="py-4 px-6">
-4537598435984375                  </td>
-                  <td class="py-4 px-6">
-                      <div class="flex items-center">
-                          <div class="h-2.5 w-2.5 rounded-full  mr-2"></div> Reviewed
-                      </div>
-                  </td>
-                  <td class="py-4 px-6">
-                    <button  @click="Add()" type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Add To Wherehouse</button>
-                    <button @click="DeleteOrder()"  type="button" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Remove </button>   
-                  </td>
-              </tr>
+             
+              
+              
+            
           </tbody>
       </table>
     </div>
@@ -141,10 +78,51 @@ const { simpleTableData, paginatedTableData, wideTableData } = useTableData()
 
 
 
+//created () {
+     // this.axios.get('https://v1.nocodeapi.com/ahmed000/ow/yEsnpsheKBYtzvrI/byCityName?q=khartoum')
+      //.then ((response =>{
+        //this.orders = response.data
+        //console.log(response.data);
+    //  } ) )
+      //.catch((error) => {
+        //console.log(error);
+     // })
+      
+      
+  //}, 
+
+
 export default {
 name: "EmployeeList",
 data() {
-      return {}
+      return {
+
+        orders : [
+
+{   id : '54574' , 
+    status: ['Shipped', 'Picked Up' , ' Deliverd ' , ' In WhereHouse '],
+},
+{   id : '45353' , 
+    status: ['Shipped', 'Picked Up' , ' Deliverd ' , ' In WhereHouse '],
+},
+{   id : '52432430924834' , 
+    status: ['Shipped', 'Picked Up' , ' Deliverd ' , ' In WhereHouse '],
+},
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
+      }
     },
     methods: {
         DeleteOrder() {

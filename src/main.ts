@@ -16,14 +16,22 @@ import App from "./App.vue";
 
 
 import router from "./router";
+import * as Vue from 'vue' // in Vue 3
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import { useUserStore } from "./store/user";
+import { getRedirectRoleRoute } from "./helpers/routeHelper";
+import { authGuard } from "./guards/AuthGuard";
 const pinia = createPinia();
 const app = createApp(App);
 app.use(VueSweetalert2);
 app.component("default-layout", DashboardLayout);
 app.component("empty-layout", EmptyLayout);
 
-
 app.use(pinia)
-  .use(router)
-  .use(VueApexCharts)
-  .mount("#app");
+.use(router)
+
+
+.use(VueAxios, axios)
+.mount("#app")
+router.beforeEach(authGuard);

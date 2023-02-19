@@ -2,32 +2,53 @@ import { defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', {
     state: () => ({
-      role: ""
+      user: null as any,
+    role: ""
     }),
     getters: {
-      userRole: (state) => state.role,
+      userRole: (state) => state.user?.role,
     },
     actions: {
+      initUser() {
+        const userData = localStorage.getItem("user");
+        console.log("userData", userData)
+        if (userData) {
+          try {
+            const user = JSON.parse(userData);
+            this.user = user;
+          } catch(e){
+            //
+          }
+        }
+      },
+      setUser(user:any) {
+        this.user = user;
+        this.saveUser(user);
+      },
+      saveUser(user:any) {
+        localStorage.setItem("user", JSON.stringify(user));
+      },
       setRole(role:string) {
         this.role = role;
       },
-      setAdmin(){
+      setAdminRole(){
         this.role = 'admin';
       },
-      setSaleman(){
+      setSalemanRole(){
         this.role = 'saleman';
       },
-      setRepresentive(){
+      setRepresentiveRole(){
         this.role = 'representive';
       },
-      setAgent(){
+      setAgentRole(){
         this.role = 'agent';
       },
-      setWherehouse(){
+      setWherehouseRole(){
         this.role = 'wherehouse';
       },
-      setUser(){
+      setUserRole(){
         this.role = 'user';
-      }
+      },
+      
     }
 })

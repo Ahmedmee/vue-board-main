@@ -47,8 +47,8 @@
                 </svg>
               </div>
   
-              <div class="mx-5">
-                <h4 class="text-2xl font-semibold text-gray-700">20</h4>
+              <div class="mx-5" v-for="statisic in Statistics" :key="statisic">
+                <h4 class="text-2xl font-semibold text-gray-700">{{statisic.users}}</h4>
                 <div class="text-gray-500">New Users</div>
               </div>
             </div>
@@ -80,8 +80,8 @@
                 </svg>
               </div>
   
-              <div class="mx-5">
-                <h4 class="text-2xl font-semibold text-gray-700">23</h4>
+              <div class="mx-5"  v-for="statisic in Statistics" :key="statisic">
+                <h4 class="text-2xl font-semibold text-gray-700">{{statisic.Torders}}</h4>
                 <div class="text-gray-500">Total Orders</div>
               </div>
             </div>
@@ -113,8 +113,8 @@
                 </svg>
               </div>
   
-              <div class="mx-5">
-                <h4 class="text-2xl font-semibold text-gray-700">10</h4>
+              <div class="mx-5" v-for="statisic in Statistics" :key="statisic">
+                <h4 class="text-2xl font-semibold text-gray-700">{{statisic.dorders}}</h4>
                 <div class="text-gray-500">Deliverd Orders</div>
               </div>
             </div>
@@ -152,7 +152,24 @@
   
 </template>
 
-<script setup lang="ts">
+<script  >
+export default {
+
+data() {
+      return {
+        Statistics : [
+
+            {   users: '9' , 
+                Torders: '10',
+                dorders :'6'
+            },
+
+          ]
+      }
+    },
+             // Adding an input method from SweetAlert 2 automatically binds an input form.
+       
+}
 
 import DonutChart from "@/components/charts/DonutChart.vue";
 import LineChart from "@/components/charts/LineChart.vue";

@@ -35,7 +35,7 @@
                   
               </tr>
           </thead>
-          <tbody>
+          <tbody v-for="order in orders" :key="order">
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                  
                   <th scope="row" class="flex items-center py-4 px-6 text-gray-900 whitespace-nowrap dark:text-white">
@@ -154,7 +154,41 @@
   
 </template>
 
-<script setup lang="ts">
+<script >
 import { useTableData } from '../hooks/useTableData'
 const { simpleTableData, paginatedTableData, wideTableData } = useTableData()
+
+export default {
+  name : 'The-table',
+data () {
+
+  return {
+
+    orders : [
+
+            {   id : '54574' , 
+                Ordername: 'Refrigerator',
+                status: ['Shipped', 'Picked Up' , ' Deliverd ' , ' In WhereHouse '],
+                
+            }           
+           
+
+
+        ]
+  }
+}
+//created () {
+     // this.axios.get('https://v1.nocodeapi.com/ahmed000/ow/yEsnpsheKBYtzvrI/byCityName?q=khartoum')
+      //.then ((response =>{
+        //this.orders = response.data
+        //console.log(response.data);
+    //  } ) )
+      //.catch((error) => {
+        //console.log(error);
+     // })
+      
+      
+  //}, 
+
+}
 </script>

@@ -107,7 +107,18 @@ data () {
         ]
   }
 }
-
+//created () {
+     // this.axios.get('https://v1.nocodeapi.com/ahmed000/ow/yEsnpsheKBYtzvrI/byCityName?q=khartoum')
+      //.then ((response =>{
+        //this.orders = response.data
+        //console.log(response.data);
+    //  } ) )
+      //.catch((error) => {
+        //console.log(error);
+     // })
+      
+      
+  //}, 
 
 }
  

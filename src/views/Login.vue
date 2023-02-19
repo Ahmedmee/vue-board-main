@@ -63,7 +63,7 @@
         <div class="flex items-center justify-between mt-4">
           <div>
             <label class="inline-flex items-center">
-<router-link to="/Registration">
+       <router-link to="/Registration">
               <a
               class="block text-sm text-indigo-700 fontme hover:underline"
               href="#"
@@ -104,9 +104,11 @@
 </template>
 
 <script setup lang="ts">
+import { getRedirectRoleRoute } from "@/helpers/routeHelper";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import {useUserStore} from "../store/user";
+
 
 
 const router = useRouter();
@@ -143,41 +145,9 @@ const users=[
 function login() { 
 
 const user=search(email.value,users);
-console.log(user);
-
-if(user.role==="admin"){
-  userStore.setAdmin();
-  router.push("/charts");
-  }
-  else if(user.role==="saleman") {
-    userStore.setSaleman();
-  // console.log(userStore.userRole);
-    router.push("/ChartViewWhereHouse");
-  }
-  else if(user.role==="wherehouse") {
-    userStore.setWherehouse();
-  // console.log(userStore.userRole);
-    router.push("/ChartViewWhereHouse");
-  }
-
-
-  else if(user.role==="agent") {
-    userStore.setAgent();
-  // console.log(userStore.userRole);
-    router.push("/ChartViewAgent");
-  }
-
-  else if(user.role==="representive") {
-    userStore.setRepresentive();
-  // console.log(userStore.userRole);
-    router.push("/ChartViewRepresentive");
-  }
-  else if(user.role==="user") {
-    userStore.setUser();
-  // console.log(userStore.userRole);
-    router.push("/ChartViewUser");
-  }
-  localStorage.setItem("role", user.role);
+  userStore.setUser(user);
+  const route = getRedirectRoleRoute(userStore.user.role);
+  router.push(route);
 }
 function search(nameKey: any, myArray: string|any[]){
     for (let i=0; i < myArray.length; i++) {

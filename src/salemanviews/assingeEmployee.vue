@@ -35,133 +35,32 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                   
-                    <th scope="row" class="flex items-center py-4 px-6 text-gray-900 whitespace-nowrap dark:text-white">
-                        <div class="pl-3">
-                            <div class="text-base font-semibold">34309845094308</div>
-                        </div>  
-                    </th>
-                    <td class="py-4 px-6">
-                      Refrigerator 
-                    </td>
-                    <td class="py-4 px-6">
-                        <div class="flex items-center">
-                             Ordered
-                        </div>
-                    </td>
-                    <td class="py-2 px-2">
-                      <select name="Representitive" id="cars" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <option value="volvo">Ahmed Mohmmed</option>
-                        <option value="saab">Othman Ali</option>
-                        <option value="mercedes">Yassier Mohmmed</option>
-                        <option value="audi">Ali Adam</option>
-                      </select>                    </td>
-                      <td><button  type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"  >Assign</button></td>
-
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    
-                  <th scope="row" class="flex items-center py-4 px-6 text-gray-900 whitespace-nowrap dark:text-white">
-                    <div class="pl-3">
-                        <div class="text-base font-semibold">4543095858043</div>
-                    </div>  
-                </th>
-      
-                   
-                    <td class="py-4 px-6">
-                      Clothes
-                    </td>
-                    <td class="py-4 px-6">
-                        <div class="flex items-center">
-                          Ordered
-                        </div>
-                    </td>
-                    <td class="py-2 px-2">
-                      <select name="Representitive" id="cars" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <option value="volvo">Ahmed Mohmmed</option>
-                        <option value="saab">Othman Ali</option>
-                        <option value="mercedes">Yassier Mohmmed</option>
-                        <option value="audi">Ali Adam</option>
-                      </select>
-
-                    </td>
-                  <td><button  type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"  >Assign</button></td>
-
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                   
-                  <th scope="row" class="flex items-center py-4 px-6 text-gray-900 whitespace-nowrap dark:text-white">
-                    <div class="pl-3">
-                        <div class="text-base font-semibold">45439058435094</div>
-                    </div>  
-                </th>
-                    <td class="py-4 px-6">
-                      electrical tools
-                    </td>
-                    <td class="py-4 px-6">
-                        <div class="flex items-center">
-                          Ordered
-                        </div>
-                    </td>
-                    <td class="py-2 px-2">
-                      <select name="Representitive" id="cars" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <option value="volvo">Ahmed Mohmmed</option>
-                        <option value="saab">Othman Ali</option>
-                        <option value="mercedes">Yassier Mohmmed</option>
-                        <option value="audi">Ali Adam</option>
-                      </select></td>
-                      <td><button  type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"  >Assign</button></td>
-
-                </tr>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                    
-      
-                  <th scope="row" class="flex items-center py-4 px-6 text-gray-900 whitespace-nowrap dark:text-white">
-                    <div class="pl-3">
-                        <div class="text-base font-semibold">3483480248023840</div>
-                    </div>  
-                </th>
-                    <td class="py-4 px-6">
-                      washing machine
-                                  </td>
-                    <td class="py-4 px-6">
-                        <div class="flex items-center">
-                          Ordered
-                        </div>
-                    </td>
-                    <td class="py-2 px-2">
-                      <select name="Representitive" id="cars" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <option value="volvo">Ahmed Mohmmed</option>
-                        <option value="saab">Othman Ali</option>
-                        <option value="mercedes">Yassier Mohmmed</option>
-                        <option value="audi">Ali Adam</option>
-                      </select>                    </td>
-                      <td><button  type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"  >Assign</button></td>
-
-                </tr>
+            <tbody v-for="order in orders" :key="order" >
+               
+               
+              
+              
                 <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
                   
                   <th scope="row" class="flex items-center py-4 px-6 text-gray-900 whitespace-nowrap dark:text-white">
                     <div class="pl-3">
-                        <div class="text-base font-semibold">3483274032740</div>
+                        <div class="text-base font-semibold">{{order.id}}</div>
                     </div>  
                 </th>
                     <td class="py-4 px-6">
-                      washing machine
-                                  </td>
+                      {{ order.Ordername }}
+
+                    </td>
                     <td class="py-4 px-6">
                         <div class="flex items-center">
-                          Ordered
+                          {{ order.status[1] }}
                         </div>
                     </td>
                     <td class="py-2 px-2">
                       <select name="Representitive" id="cars" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <option value="volvo">Ahmed Mohmmed</option>
-                        <option value="saab">Othman Ali</option>
-                        <option value="mercedes">Yassier Mohmmed</option>
-                        <option value="audi">Ali Adam</option>
+                        <option value="volvo">{{order.Representitive[0]}}</option>
+                        <option value="saab">{{order.Representitive[1]}}</option>
+                        <option value="mercedes">{{order.Representitive[2]}}</option>
                       </select>                      
                     </td>
 
@@ -195,7 +94,32 @@ const { simpleTableData, paginatedTableData, wideTableData } = useTableData()
 export default {
 name: "EmployeeList",
 data() {
-      return {}
+      return {
+
+
+
+        orders : [
+
+{   id : '54574' , 
+    Ordername: 'Refrigerator',
+    status: ['Shipped', 'orderd' , ' Deliverd ' , ' In WhereHouse '],
+    Representitive :[  'mohmmed Ahmed' , 'yassier mohmmed' , 'mohmmed adam' ]
+    
+
+},
+{   id : '54574' , 
+    Ordername: 'Refrigerator',
+    status: ['Shipped', 'orderd' , ' Deliverd ' , ' In WhereHouse '],
+    Representitive :[  'mohmmed Ahmed' , 'yassier mohmmed' , 'mohmmed adam' ]
+    
+}        
+
+
+
+]
+
+
+      }
     },
     methods: {
         DeleteEmployee() {

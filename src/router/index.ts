@@ -62,16 +62,28 @@ const routes: Array<RouteRecordRaw> = [
     path: "/assingeEmployee",
     name: "assingeEmployee",
     component: assingeEmployee,
+    meta: {
+      needsAuth: true,
+      needsRole: "saleman"
+    }
   },
   {
     path: "/assingeEmployee",
     name: "assingeEmployee",
     component: assingeEmployee,
+    meta: {
+      needsAuth: true,
+      needsRole: "saleman"
+    }
   },
   {
     path: "/WhereHousEditProfile",
     name: "WhereHousEditProfile",
     component: WhereHousEditProfile,
+    meta: {
+      needsAuth: true,
+      needsRole: "wherehouse"
+    }
   },
   {
     path: "/Registration",
@@ -83,21 +95,32 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/UserPayment",
     name: "UserPayment",
-    component:UserPayment 
+    component:UserPayment ,
+    meta: {
+      needsAuth: true,
+      needsRole: "user"
+    }
     
   },
   {
     path: "/cargoDetils",
     name: "cargoDetils",
-    component:cargoDetils 
-    
+    component:cargoDetils ,
+    meta: {
+      needsAuth: true,
+      needsRole: "user"
+    }
   },
 
 
   {
     path: "/Employee",
     name: "Employee",
-    component:Employee 
+    component:Employee ,
+    meta: {
+      needsAuth: true,
+      needsRole: "admin"
+    }
     
   },
 
@@ -105,7 +128,11 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/ChartViewUser",
     name: "ChartViewUser",
-    component:ChartViewUser 
+    component:ChartViewUser ,
+    meta: {
+      needsAuth: true,
+      needsRole: "user"
+    }
     
   },
   
@@ -113,27 +140,42 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/TrackRepresentive",
     name: "TrackRepresentive",
-    component:TrackRepresentive 
+    component:TrackRepresentive ,
+    meta: {
+      needsAuth: true,
+      needsRole: "representive"
+    }
     
   },
   {
     path: "/TablesRepresentive",
     name: "TablesRepresentive",
-    component:TablesRepresentive 
+    component:TablesRepresentive,
+    meta: {
+      needsAuth: true,
+      needsRole: "representive"
+    }
     
   },
   
   {
     path: "/ChartViewRepresentive",
     name: "ChartViewRepresentive",
-    component:ChartViewRepresentive 
-    
+    component:ChartViewRepresentive ,
+    meta: {
+      needsAuth: true,
+      needsRole: "representive"
+    }
   },
   
   {
     path: "/writeReviewrepresentive",
     name: "writeReviewrepresentive",
-    component:writeReviewrepresentive 
+    component:writeReviewrepresentive ,
+    meta: {
+      needsAuth: true,
+      needsRole: "representive"
+    }
     
   },
   
@@ -168,24 +210,38 @@ const routes: Array<RouteRecordRaw> = [
     path: "/TablesAgent",
     name: "TablesAgent",
     component:TablesAgent , 
-    
+     meta: {
+      needsAuth: true,
+      needsRole: "agent"
+    }
   },
   {
     path: "/TrackAgent",
     name: "TrackAgent",
     component:TrackAgent , 
-    
+    meta: {
+      needsAuth: true,
+      needsRole: "agent"
+    }
   },
   {
     path: "/ChartViewAgent",
     name: "ChartViewAgent",
-    component:ChartViewAgent , 
+    component:ChartViewAgent ,
+    meta: {
+      needsAuth: true,
+      needsRole: "agent"
+    }
     
   },
   {
     path: "/writeReviewAgent",
     name: "writeReviewAgent",
-    component:writeReviewAgent , 
+    component:writeReviewAgent ,
+    meta: {
+      needsAuth: true,
+      needsRole: "agent"
+    }
     
   },
   {
@@ -198,7 +254,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/FormsUser",
     name: "FormsUser",
     component: FormsUser, 
-    
+    meta: {
+      needsAuth: true,
+      needsRole: "user"
+    }
   },
 
   
@@ -206,18 +265,28 @@ const routes: Array<RouteRecordRaw> = [
     path: "/TablesUser",
     name: "TablesUser",
     component: TablesUser, 
-    
+    meta: {
+      needsAuth: true,
+      needsRole: "user"
+    }
   },
   {
     path: "/Track",
     name: "Track",
     component: Track, 
-    
+    meta: {
+      needsAuth: true,
+      needsRole: "user"
+    }
   },
   {
     path: "/ChartViewWhereHouse",
     name: "ChartViewWhereHouse",
     component: ChartViewWhereHouse,
+    meta: {
+      needsAuth: true,
+      needsRole: "wherehouse"
+    }
   },
   {
     path: "/EditProfile",
@@ -228,6 +297,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/forms",
     name: "Forms",
     component: Forms,
+    meta: {
+      needsAuth: true,
+      needsRole: "admin"
+    }
   },
 
 
@@ -235,7 +308,11 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/FormsWhereHouse",
     name: "FormsWhereHouse",
-    component: FormsWhereHouse
+    component: FormsWhereHouse,
+    meta: {
+      needsAuth: true,
+      needsRole: "wherehouse"
+    }
   },
 
   
@@ -243,12 +320,20 @@ const routes: Array<RouteRecordRaw> = [
     path: "/LoginWhereHouse",
     name: "LoginWhereHouse",
     component: LoginWhereHouse,
+    meta: {
+      needsAuth: true,
+      needsRole: "wherehouse"
+    }
   },
  
   {
     path: "/TablesWhereHouse",
     name: "TablesWhereHouse",
     component: TablesWhereHouse,
+    meta: {
+      needsAuth: true,
+      needsRole: "wherehouse"
+    }
   },
   
 
@@ -256,6 +341,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/tables",
     name: "Tables",
     component: Tables,
+    meta: {
+      needsAuth: true,
+      needsRole: "admin"
+    }
   },
   {
     path: "/ui-elements",
@@ -271,6 +360,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/charts",
     name: "Chart",
     component: Chart,
+    meta: {
+      needsAuth: true,
+      needsRole: "admin"
+    }
   },
   {
     path: "/blank",
