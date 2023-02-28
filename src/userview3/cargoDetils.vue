@@ -2,8 +2,69 @@
  
     <!-- Breadcrumb -->
     <Breadcrumb breadcrumb="Forms" />
+
+
+    <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-3xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Request Order </span> From Company.</h1>
+<br>
+<br> 
+<div class="border-solid border-2 border-emerald-200 bg-white">
+<form  class="p-5 "  @submit.prevent="showAlert" >
+  <h6 class="mb-4 text-1xl font-extrabold text-gray-900 dark:text-white md:text-1xl lg:text-1xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"> 
+    Shipper Details
+     </span></h6>
+
+
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Name</label>
+      <input  type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ahmed" required>
+  </div>
+
+<div>
+  <label for="company" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Email</label>
+  <input  type="text" id="company" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="khartoum " required>
+</div> 
+      <div>
+          <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+          <input v-model="track3" type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="+249" pattern="[0-9]{4}[0-9]{3}[0-9]{3}" required>
+      </div>
+     
+    
+  </div>
+
+  <h6 class="mb-4 text-1xl font-extrabold text-gray-900 dark:text-white md:text-1xl lg:text-1xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"> 
+
+    Consignee Details
+  </span></h6>
+
+
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <div>
+      <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Name</label>
+      <input  type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ahmed" required>
+  </div>
+
+<div>
+  <label for="company" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> Email</label>
+  <input  type="text" id="company" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Ahmed1999@gmail.com " required>
+</div> 
+      <div>
+          <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number</label>
+          <input v-model="track3" type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="+249" pattern="[0-9]{4}[0-9]{3}[0-9]{3}" required>
+      </div>
+     
+    
+  </div>
+ 
+</form>
+
+
+
+</div>
+<br>
+<br>
+
    
-<h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-3xl"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Request Order </span> From Company.</h1>
 <br>
 
 
@@ -26,17 +87,17 @@ Shipment Details
         
         <div>
           <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What Is The Item</label>
-          <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="description" required>
+          <input v-model="item" type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Item" required>
       </div>
 
       <div>
         <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Brand Or Manufacturer</label>
-        <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="description" required>
+        <input v-model="Manufacturer" type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Manufacturer" required>
     </div>
 
     <div>
       <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Which Model Is It</label>
-      <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="description" required>
+      <input v-model="Model" type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Model" required>
   </div>
 
   <div>
@@ -46,7 +107,7 @@ Shipment Details
 
 <div>
   <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Which Is It Made Of</label>
-  <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="description" required>
+  <input type="text" v-model="Made" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Made" required>
 </div>
 <div>
   <label for="visitors" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Weight (kg)</label>
@@ -325,7 +386,7 @@ Shipment Details
 
 <div>
   <label for="visitors" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Weight (kg)</label>
-  <input  id="visitors" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+  <input v-model="Weight"  id="visitors" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Weight" required>
 </div>
           
 
@@ -1146,7 +1207,7 @@ Shipment Details
     <input type="text"  v-model="text"  placeholder="The number of cubic meters reserved by the order"   id="visitors" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
 </div>
     <div>
-      <label for="">Shipment Data</label>
+      <label for="">Shipment Date</label>
       <br>
       <br>
     <input
@@ -1175,9 +1236,9 @@ Shipment Details
 
 
 
-   <router-link to="UserPayment"  >
-  <button type="submit"  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Order</button>
-</router-link>
+   
+  <button @click="pay()" type="submit"  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Order</button>
+
 
   
 
@@ -1192,6 +1253,11 @@ import { ModelListSelect } from 'vue-search-select';
 export default {
     data() {
       return {
+
+        Made : '',
+        Model : '',
+        Manufacturer :'',   
+        item : '',
         text: '',
         deliveryDate: "",
       knockDate: "",
@@ -1216,6 +1282,7 @@ export default {
       }
       
     },
+  
     computed: {
     // Computed property named "count", depending on the
     // "text" variable
@@ -1230,6 +1297,18 @@ export default {
     }
   },
     methods : {
+      pay() {
+// Use sweetalert2
+      if(this.Made== "" && this.Model =="" && this.Manufacturer == "" && this.item == ""
+        && this.chooseOption == ""  ){
+      this.$swal('All Filds Are mandatory');
+                  
+    } 
+      
+      else {
+        this.$router.push('/UserPayment')
+      }
+    },
       toggle() {
       this.btn = false;
     }, 
@@ -1293,7 +1372,20 @@ addDays(dateString, days) {
   const addTime = days * 24 * 60 * 60 * 1000;
   const result = new Date(date + addTime);
   return`${result.getMonth() + 1}/${result.getDate()}/${result.getFullYear()}`;
-}
+},
+showAlert() {
+      // Use sweetalert2
+      if(this.track== null && this.track1 ==null && this.track2 == null && this.track3 == null
+         
+        && this.track6 == null  ){
+      this.$swal('All Filds Are mandatory');
+                  
+    } 
+      
+      else {
+        this.$router.push('/cargoDetils')
+      }
+    },
 
 
   

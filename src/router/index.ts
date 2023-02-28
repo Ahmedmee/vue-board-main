@@ -31,6 +31,7 @@ import writeReviewrepresentive from '../Representiveview5/writeReviewrepresentiv
 import UserPayment  from "../userview3/UserPayment.vue";
 import Employee from "../views/Employee.vue";
 import cargoDetils  from "../userview3/cargoDetils.vue";
+import CreateOrder  from "../userview3/CreateOrder.vue";
 import Registration from "../views/Registration.vue";
 import Forget from "../views/Forget.vue";
 import assingeEmployee from "../salemanviews/assingeEmployee.vue"
@@ -119,7 +120,8 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/cargoDetils",
     name: "cargoDetils",
-    component:cargoDetils ,
+    component: CreateOrder,
+    // component:cargoDetils ,
     meta: {
       needsAuth: true,
       needsRole: "user"
