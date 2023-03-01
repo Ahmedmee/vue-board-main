@@ -49,7 +49,7 @@
   
               <div class="mx-5" v-for="statisic in Statistics" :key="statisic">
                 <h4 class="text-2xl font-semibold text-gray-700">{{statisic.users}}</h4>
-                <div class="text-gray-500">New Users</div>
+                <div class="text-gray-500">New orders</div>
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ data() {
       return {
         Statistics : [
 
-            {   users: '9' , 
+            {   users: '1' , 
                 Torders: '10',
                 dorders :'6'
             },
