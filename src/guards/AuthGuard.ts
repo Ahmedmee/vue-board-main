@@ -11,6 +11,7 @@ export async function authGuard(to:any, from:any, next:any) {
       next("/");
     } else {
       const userRole = computed(() => userStore.userRole);
+      // TODO
       // const token = computed(() => userStore.token);
       // const refreshToken = computed(() => userStore.refreshToken);
       // const refreshResponse = await getRefreshToken(token.value, refreshToken.value);

@@ -159,9 +159,9 @@ data() {
       return {
         Statistics : [
 
-            {   users: '9' , 
-                Torders: '10',
-                dorders :'6'
+            {   users: '1' , 
+                Torders: '0',
+                dorders :'0'
             },
 
           ]

@@ -182,6 +182,8 @@ const notificationOpen = ref(false);
 
 const logout = () => {
   userStore.setUser(null);
+  // TODO: logout route
+  // window.location.href = "http://mowafaqwali-001-site1.gtempurl.com/logout";
   router.push("/");
 }
 </script>
