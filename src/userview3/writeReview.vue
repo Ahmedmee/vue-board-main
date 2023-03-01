@@ -39,7 +39,7 @@
 
 import { useTableData } from '../hooks/useTableData'
 const { simpleTableData, paginatedTableData, wideTableData } = useTableData()
-
+import axios from 'axios';
 export default {
 name: "ReviewSubmit",
 data() {
@@ -48,6 +48,13 @@ data() {
       }
     },
     methods: {
+ //     sendPost() {
+
+// axios
+// .post("http://mowafaqwali-001-site1.gtempurl.com/api/CreateEmployee" , this.inputFild  )
+// .then(res => {
+ // console.log(res);
+// })},
        
       async Review() {
 
