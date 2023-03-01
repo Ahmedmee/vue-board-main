@@ -176,13 +176,7 @@ if (this.area == ''){
  }
  },
 
-      sendPost() {
-
-axios
-.post("http://mowafaqwali-001-site1.gtempurl.com/api/CreateEmployee" , {userInfo: this.userInfo}  )
-.then(res => {
-  console.log(res);
-})},
+    
         
       removeRow: function(index) {
             this.Employees.splice(index, 1);
