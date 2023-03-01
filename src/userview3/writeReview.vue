@@ -42,9 +42,10 @@ const { simpleTableData, paginatedTableData, wideTableData } = useTableData()
 import axios from 'axios';
 export default {
 name: "ReviewSubmit",
+
 data() {
       return {
-        inputFild : ""
+        inputFild : "" ,
       }
     },
     methods: {
